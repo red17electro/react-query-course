@@ -4,3 +4,6 @@ dist
 dist-ssr
 *.local
 .vscode
+react-query-course.iml
+vcs.xml
+modules.xml
