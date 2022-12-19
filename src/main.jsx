@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { worker } from "@uidotdev/react-query-api";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import {FetchingIndicator} from "./components/FetchingIndicator";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,6 +33,7 @@ new Promise((res) => setTimeout(res, 100))
             </div>
           </BrowserRouter>
           <ReactQueryDevtools />
+          <FetchingIndicator/>
         </QueryClientProvider>
       </React.StrictMode>,
       document.getElementById("root")
