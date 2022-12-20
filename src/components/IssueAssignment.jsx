@@ -50,7 +50,7 @@ export const IssueAssignment = (({assignee, issueNumber}) => {
               </div>
           }
       </div>
-    <GoGear onClick={() => !usersQuery.isLoading && setMenuOpen(true)}/>
+    <GoGear onClick={() => !usersQuery.isLoading && setMenuOpen(() => !open)}/>
         {menuOpen && <div className="menu">
             {usersQuery.data?.map((user) => {
                 return <div key={user.id} onClick={()=>setAssignment.mutate(user.id)}>
